@@ -7,4 +7,4 @@ on:
     types: [submitted]
 jobs:
   contracts:
-    uses: triverus/aidlc-kit/.github/workflows/contract-check.yml@v0.1.0
+    uses: sarchboldtvs/snowflake-aidlc-scaffoled-kit/.github/workflows/contract-check.yml@v0.1.0

@@ -5,6 +5,6 @@ on:
       kit_version: { description: "Kit tag, e.g. v0.1.1", required: true }
 jobs:
   sync:
-    uses: triverus/aidlc-kit/.github/workflows/rules-sync.yml@v0.1.0
+    uses: sarchboldtvs/snowflake-aidlc-scaffoled-kit/.github/workflows/rules-sync.yml@v0.1.0
     with: { kit_version: "${{ inputs.kit_version }}" }
     secrets: { KIT_TOKEN: "${{ secrets.KIT_TOKEN }}" }

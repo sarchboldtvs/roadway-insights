@@ -7,6 +7,6 @@ on:
       generate_config: { description: "Generate HCL for import blocks", type: boolean, default: false }
 jobs:
   plan:
-    uses: triverus/aidlc-kit/.github/workflows/tf-plan.yml@v0.1.0
+    uses: sarchboldtvs/snowflake-aidlc-scaffoled-kit/.github/workflows/tf-plan.yml@v0.1.0
     with: { generate_config: "${{ inputs.generate_config || false }}" }
     secrets: inherit

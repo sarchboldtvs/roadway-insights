@@ -4,4 +4,4 @@ on:
     types: [opened, edited, synchronize, reopened, ready_for_review]
 jobs:
   pr-check:
-    uses: triverus/aidlc-kit/.github/workflows/pr-check.yml@v0.1.0
+    uses: sarchboldtvs/snowflake-aidlc-scaffoled-kit/.github/workflows/pr-check.yml@v0.1.0

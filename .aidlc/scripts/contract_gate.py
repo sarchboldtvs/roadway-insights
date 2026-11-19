@@ -40,6 +40,10 @@ def main():
     approvers = {r["user"]["login"] for r in reviews if r.get("state") == "APPROVED"}
     missing = []
     for team in teams:
+        if "/" not in team:  # a username (personal account, no teams)
+            if team.lstrip("@").lower() not in {a.lower() for a in approvers}:
+                missing.append(team)
+            continue
         org, slug = team.split("/", 1)
         ok = False
         for user in approvers:

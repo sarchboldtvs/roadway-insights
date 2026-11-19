@@ -7,5 +7,5 @@ on:
     types: [opened, edited]
 jobs:
   scan:
-    uses: triverus/aidlc-kit/.github/workflows/leak-scan.yml@v0.1.0
+    uses: sarchboldtvs/snowflake-aidlc-scaffoled-kit/.github/workflows/leak-scan.yml@v0.1.0
     with: { blocking: false }

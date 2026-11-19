@@ -8,6 +8,6 @@ on:
 concurrency: { group: board-sync, cancel-in-progress: false }
 jobs:
   sync:
-    uses: triverus/aidlc-kit/.github/workflows/board-sync.yml@v0.1.0
+    uses: sarchboldtvs/snowflake-aidlc-scaffoled-kit/.github/workflows/board-sync.yml@v0.1.0
     with: { minutes: "${{ inputs.minutes || '0' }}" }
     secrets: { BOARD_TOKEN: "${{ secrets.BOARD_TOKEN }}" }
