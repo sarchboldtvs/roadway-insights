@@ -1,10 +1,13 @@
-# Replace the team handles with real GitHub teams before the first PR.
-*                       @triverus/aidlc-leads
-/contracts/             @triverus/snowflake-leads @triverus/bi-leads
-/terraform/             @triverus/platform-leads
-/terraform/access/      @triverus/data-owners
-/snowflake/             @triverus/snowflake-leads
-/powerbi/               @triverus/bi-leads
-/.github/               @triverus/aidlc-leads
-/.aidlc/                @triverus/aidlc-leads
-/AGENTS.md              @triverus/aidlc-leads
+# Personal GitHub account: no teams, so the owner reviews everything.
+# When the repos move to a GitHub organization, switch to teams:
+#   /contracts/ snowflake-leads + bi-leads, /terraform/ platform-leads,
+#   /terraform/access/ data-owners, /snowflake/ snowflake-leads, /powerbi/ bi-leads
+*                       @sarchboldtvs
+/contracts/             @sarchboldtvs
+/terraform/             @sarchboldtvs
+/terraform/access/      @sarchboldtvs
+/snowflake/             @sarchboldtvs
+/powerbi/               @sarchboldtvs
+/.github/               @sarchboldtvs
+/.aidlc/                @sarchboldtvs
+/AGENTS.md              @sarchboldtvs

@@ -56,6 +56,6 @@ customProperties:
     value:
       - name: <Semantic model name>
         type: powerbi-semantic-model
-        team: <github-org>/<team-slug>
+        team: <github-org>/<team-slug>   # or a GitHub username on a personal account
   - property: issues
     value: ["#<parent issue>"]

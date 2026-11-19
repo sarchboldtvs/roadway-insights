@@ -1,6 +1,6 @@
 {
   "extraKnownMarketplaces": {
-    "triverus-aidlc": { "source": "triverus/aidlc-kit", "ref": "v0.1.0" },
+    "triverus-aidlc": { "source": "sarchboldtvs/snowflake-aidlc-scaffoled-kit", "ref": "v0.1.0" },
     "compound-engineering-plugin": { "source": "EveryInc/compound-engineering-plugin" },
     "fabric-collection": { "source": "microsoft/skills-for-fabric" }
   },

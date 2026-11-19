@@ -4,6 +4,6 @@ on:
     paths: ["snowflake/**"]
 jobs:
   plan:
-    uses: triverus/aidlc-kit/.github/workflows/dcm.yml@v0.1.0
+    uses: sarchboldtvs/snowflake-aidlc-scaffoled-kit/.github/workflows/dcm.yml@v0.1.0
     with: { action: plan, target: DEV, environment: snowflake-plan }
     secrets: inherit

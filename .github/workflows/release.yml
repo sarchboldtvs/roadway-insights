@@ -6,12 +6,12 @@ on:
       issue: { description: "Parent issue number", required: true }
 jobs:
   terraform:
-    uses: triverus/aidlc-kit/.github/workflows/tf-apply.yml@v0.1.0
+    uses: sarchboldtvs/snowflake-aidlc-scaffoled-kit/.github/workflows/tf-apply.yml@v0.1.0
     with: { environment: prod, ref: main }
     secrets: inherit
   dcm:
     needs: terraform
-    uses: triverus/aidlc-kit/.github/workflows/dcm.yml@v0.1.0
+    uses: sarchboldtvs/snowflake-aidlc-scaffoled-kit/.github/workflows/dcm.yml@v0.1.0
     with: { action: deploy, target: PROD, environment: prod }
     secrets: inherit
   powerbi:

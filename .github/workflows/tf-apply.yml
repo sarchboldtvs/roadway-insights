@@ -7,6 +7,6 @@ on:
       ref: { description: "Branch or SHA (the PR branch for DEV)", required: true }
 jobs:
   apply:
-    uses: triverus/aidlc-kit/.github/workflows/tf-apply.yml@v0.1.0
+    uses: sarchboldtvs/snowflake-aidlc-scaffoled-kit/.github/workflows/tf-apply.yml@v0.1.0
     with: { environment: snowflake-dev, ref: "${{ inputs.ref }}" }
     secrets: inherit

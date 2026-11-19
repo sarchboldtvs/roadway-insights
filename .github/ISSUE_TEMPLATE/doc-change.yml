@@ -1,0 +1,73 @@
+name: Doc change
+description: A change to documentation or other non-code files. Skips the five phases.
+title: "Docs: "
+labels: ["type:docs"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A **Doc change** skips the five phases: no phase label and no
+        `plan-approved`. It still needs this issue, a branch, a draft pull request
+        and a person's review before merge.
+
+        It can change any non-code file, for example README.md, AGENTS.md,
+        agents/, docs/ and the issue and pull request templates. It can't change
+        application code, tests, configuration, scripts, anything under
+        `terraform/`, `snowflake/`, `powerbi/`, `contracts/`,
+        `.github/workflows/`, `.github/hooks/` or `.aidlc/`. For those, use the
+        **Work item** form.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of change
+      options:
+        - Fix (typo, broken link, formatting)
+        - Clarify (wording only, same meaning)
+        - Catch up (match what's already decided or built)
+        - Process (AGENTS.md, agents/, lifecycle, templates)
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: What should change
+      description: The files or sections, and what to change in them.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+    validations:
+      required: true
+  - type: dropdown
+    id: reviewer
+    attributes:
+      label: Who reviews
+      description: >-
+        If the change touches a requirement, a concept, a decision or a
+        process rule, pick the owner of it.
+      options:
+        - Any maintainer
+        - Product owner
+        - Design lead
+        - Technology lead
+        - Engineering lead
+        - Assurance
+    validations:
+      required: true
+  - type: input
+    id: issue
+    attributes:
+      label: Related issue
+      description: Optional. For example #12
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: >-
+            This change doesn't add or change a requirement, a confirmed concept or an
+            approved decision. If it does, it belongs in a Work item.
+          required: true

@@ -5,4 +5,4 @@ updates:
     schedule: { interval: weekly }
     groups:
       aidlc-kit:
-        patterns: ["triverus/aidlc-kit*"]
+        patterns: ["sarchboldtvs/snowflake-aidlc-scaffoled-kit*"]
