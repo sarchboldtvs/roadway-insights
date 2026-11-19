@@ -1,0 +1,32 @@
+name: Work item
+description: New work. Starts in Phase 1 (Discovery) as a parent issue.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Starts in **Phase 1: Discovery**. People move it through the phases on
+        the board. In Phase 3 the architect creates one sub-issue per target.
+        See docs/lifecycle.md.
+  - type: textarea
+    id: problem
+    attributes: { label: The problem, description: "What isn't working today, and for whom?" }
+    validations: { required: true }
+  - type: textarea
+    id: outcome
+    attributes: { label: Intended outcome, description: "What should be true when this is done?" }
+  - type: checkboxes
+    id: targets
+    attributes:
+      label: Likely targets (confirmed in Discovery)
+      options:
+        - label: terraform (roles, warehouses, databases, integrations)
+        - label: snowflake (schemas, tables, views, tasks; DCM)
+        - label: powerbi (semantic model, report)
+  - type: textarea
+    id: data
+    attributes:
+      label: Data access
+      description: Domains this needs to read. PROD profiling needs an approved grant (link the access PR).
+  - type: textarea
+    id: notes
+    attributes: { label: Notes and links }

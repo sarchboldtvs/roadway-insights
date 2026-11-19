@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "triverus-aidlc": { "source": "triverus/aidlc-kit", "ref": "v0.1.0" },
+    "compound-engineering-plugin": { "source": "EveryInc/compound-engineering-plugin" },
+    "fabric-collection": { "source": "microsoft/skills-for-fabric" }
+  },
+  "enabledPlugins": {
+    "aidlc-core@triverus-aidlc": true,
+    "aidlc-powerbi@triverus-aidlc": true,
+    "compound-engineering@compound-engineering-plugin": true,
+    "powerbi-authoring@fabric-collection": true
+  }
+}

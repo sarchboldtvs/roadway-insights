@@ -1,0 +1,30 @@
+name: Target sub-issue
+description: Phase 4-5 work for one target of a parent issue. Created by the technology-architect in Phase 3.
+labels: []
+body:
+  - type: input
+    id: parent
+    attributes: { label: Parent issue, placeholder: "#12" }
+    validations: { required: true }
+  - type: dropdown
+    id: target
+    attributes:
+      label: Target
+      options: [terraform, snowflake, powerbi]
+    validations: { required: true }
+  - type: textarea
+    id: scope
+    attributes: { label: Scope, description: What this sub-issue builds, from the approved plan }
+    validations: { required: true }
+  - type: input
+    id: folders
+    attributes: { label: Folders, placeholder: "terraform/ | snowflake/ | powerbi/" }
+  - type: input
+    id: contract
+    attributes: { label: Pinned contract, placeholder: "contracts/roadway/road-issues-monthly.odcs.yaml @ contract/road-issues-monthly/v1.0.0" }
+  - type: input
+    id: blocked_by
+    attributes: { label: Blocked by, placeholder: "#13 (terraform)" }
+  - type: textarea
+    id: adoption
+    attributes: { label: Objects to adopt first, description: Unmanaged objects from the technology doc }

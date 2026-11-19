@@ -1,0 +1,13 @@
+name: Board sync
+on:
+  schedule:
+    - cron: "*/10 12-23 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      minutes: { description: "Demo mode: minutes to keep checking", default: "0" }
+concurrency: { group: board-sync, cancel-in-progress: false }
+jobs:
+  sync:
+    uses: triverus/aidlc-kit/.github/workflows/board-sync.yml@v0.1.0
+    with: { minutes: "${{ inputs.minutes || '0' }}" }
+    secrets: { BOARD_TOKEN: "${{ secrets.BOARD_TOKEN }}" }

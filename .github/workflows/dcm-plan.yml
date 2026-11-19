@@ -1,0 +1,9 @@
+name: DCM plan
+on:
+  pull_request:
+    paths: ["snowflake/**"]
+jobs:
+  plan:
+    uses: triverus/aidlc-kit/.github/workflows/dcm.yml@v0.1.0
+    with: { action: plan, target: DEV, environment: snowflake-plan }
+    secrets: inherit

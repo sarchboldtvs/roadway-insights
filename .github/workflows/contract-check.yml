@@ -1,0 +1,10 @@
+name: Contract check
+on:
+  pull_request:
+    paths: ["contracts/**"]
+    types: [opened, synchronize, reopened, ready_for_review]
+  pull_request_review:
+    types: [submitted]
+jobs:
+  contracts:
+    uses: triverus/aidlc-kit/.github/workflows/contract-check.yml@v0.1.0

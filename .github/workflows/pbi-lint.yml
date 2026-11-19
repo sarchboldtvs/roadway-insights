@@ -1,0 +1,7 @@
+name: Power BI lint
+on:
+  pull_request:
+    paths: ["powerbi/**"]
+jobs:
+  lint:
+    uses: triverus/aidlc-kit/.github/workflows/pbi-lint.yml@v0.1.0

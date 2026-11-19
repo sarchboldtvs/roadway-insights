@@ -1,0 +1,15 @@
+name: Contract test
+on:
+  workflow_dispatch:
+    inputs:
+      contract: { description: "contracts/<domain>/<product>.odcs.yaml", required: true }
+      server: { description: "dev or prod", default: "dev" }
+      issue: { description: "Sub-issue number to comment on", required: true }
+jobs:
+  test:
+    uses: triverus/aidlc-kit/.github/workflows/contract-test.yml@v0.1.0
+    with:
+      contract: "${{ inputs.contract }}"
+      server: "${{ inputs.server }}"
+      issue: "${{ inputs.issue }}"
+    secrets: inherit

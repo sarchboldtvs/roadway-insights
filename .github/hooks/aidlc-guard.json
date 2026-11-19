@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "type": "command",
+        "bash": "python3 .aidlc/scripts/aidlc_guard.py",
+        "powershell": "python .aidlc/scripts/aidlc_guard.py",
+        "timeoutSec": 10
+      }
+    ]
+  }
+}

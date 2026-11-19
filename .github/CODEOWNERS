@@ -1,0 +1,10 @@
+# Replace the team handles with real GitHub teams before the first PR.
+*                       @triverus/aidlc-leads
+/contracts/             @triverus/snowflake-leads @triverus/bi-leads
+/terraform/             @triverus/platform-leads
+/terraform/access/      @triverus/data-owners
+/snowflake/             @triverus/snowflake-leads
+/powerbi/               @triverus/bi-leads
+/.github/               @triverus/aidlc-leads
+/.aidlc/                @triverus/aidlc-leads
+/AGENTS.md              @triverus/aidlc-leads

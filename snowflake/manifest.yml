@@ -1,0 +1,26 @@
+# Snowflake DCM project. VERIFY field names against `snow init <name> --template dcm_project`.
+manifest_version: 2
+type: DCM_PROJECT
+
+default_target: DEV
+
+targets:
+  DEV:
+    account_identifier: <ORG>-<ACCOUNT>
+    project_name: ROADWAY_DEV.DCM.ROADWAY_DCM
+    project_owner: AIDLC_DEV_RW
+    templating_config: DEV
+  PROD:
+    account_identifier: <ORG>-<ACCOUNT>
+    project_name: ROADWAY_PROD.DCM.ROADWAY_DCM
+    project_owner: DCM_PROD_CI
+    templating_config: PROD
+
+templating:
+  defaults:
+    wh: AIDLC_WH
+  configurations:
+    DEV:
+      db: ROADWAY_DEV
+    PROD:
+      db: ROADWAY_PROD

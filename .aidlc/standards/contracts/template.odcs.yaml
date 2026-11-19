@@ -1,0 +1,61 @@
+# ODCS v3.1 contract template. VERIFY field names with `datacontract lint`.
+apiVersion: v3.1.0
+kind: DataContract
+id: <domain>-<product>
+name: <Product name>
+version: 0.1.0
+status: draft
+domain: <domain>
+description:
+  purpose: <why this data product exists>
+  usage: <who uses it and how>
+  limitations: <known gaps>
+servers:
+  - server: dev
+    type: snowflake
+    account: <org>-<account>
+    database: DEV_<DOMAIN>
+    schema: MARTS
+  - server: prod
+    type: snowflake
+    account: <org>-<account>
+    database: PROD_<DOMAIN>
+    schema: MARTS
+schema:
+  - name: <object_name>
+    physicalName: <OBJECT_NAME>
+    physicalType: table
+    businessName: <Business name>
+    description: <what one row means>
+    customProperties:
+      - property: grain
+        value: <one row per ...>
+    properties:
+      - name: <column>
+        logicalType: string
+        physicalType: VARCHAR
+        primaryKey: true
+        required: true
+        unique: true
+        classification: internal
+        businessName: <Display name>
+        description: <meaning>
+    quality:
+      - type: sql
+        description: Reconciles to source
+        query: |
+          SELECT ABS((SELECT COUNT(*) FROM <source>) - (SELECT SUM(<count_col>) FROM <OBJECT_NAME>))
+        mustBe: 0
+roles:
+  - role: PBI_DEV_RO
+    access: read
+  - role: PBI_PROD_RO
+    access: read
+customProperties:
+  - property: consumers
+    value:
+      - name: <Semantic model name>
+        type: powerbi-semantic-model
+        team: <github-org>/<team-slug>
+  - property: issues
+    value: ["#<parent issue>"]

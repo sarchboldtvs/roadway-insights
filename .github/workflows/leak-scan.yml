@@ -1,0 +1,11 @@
+name: Leak scan
+on:
+  pull_request:
+  issue_comment:
+    types: [created, edited]
+  issues:
+    types: [opened, edited]
+jobs:
+  scan:
+    uses: triverus/aidlc-kit/.github/workflows/leak-scan.yml@v0.1.0
+    with: { blocking: false }

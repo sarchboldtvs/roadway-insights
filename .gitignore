@@ -1,0 +1,18 @@
+# Terraform
+.terraform/
+*.tfstate*
+*.tfplan
+plan.out
+plan.json
+crash.log
+# DCM
+snowflake/out/
+# Power BI
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+# Local
+.env
+*.p8
+*.pem
+power.config.json
+__pycache__/

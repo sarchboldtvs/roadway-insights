@@ -1,0 +1,12 @@
+name: Terraform apply
+# Started by a person after approving the posted plan. Environment
+# reviewers approve again before the job runs.
+on:
+  workflow_dispatch:
+    inputs:
+      ref: { description: "Branch or SHA (the PR branch for DEV)", required: true }
+jobs:
+  apply:
+    uses: triverus/aidlc-kit/.github/workflows/tf-apply.yml@v0.1.0
+    with: { environment: snowflake-dev, ref: "${{ inputs.ref }}" }
+    secrets: inherit

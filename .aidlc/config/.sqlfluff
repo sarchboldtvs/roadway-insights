@@ -1,0 +1,14 @@
+[sqlfluff]
+dialect = snowflake
+templater = jinja
+max_line_length = 120
+# DEFINE statements are DCM-specific; parse errors on them are excluded until
+# sqlfluff supports DCM syntax. VERIFY in Pilot 0.
+exclude_rules = AL07
+ignore = parsing
+
+[sqlfluff:templater:jinja:context]
+db = DEV_PLACEHOLDER
+
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = upper
